@@ -1,0 +1,18 @@
+<h1>Station Information</h1>
+<table style='text-align: center'>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Bikes Available</th>
+      <th>Docks Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @station_information["name"] %> (<%= @station_information["station_id"] %>)</td>
+      <td><%= @station_status["num_bikes_available"] %></td>
+      <td><%= @station_status["num_docks_available"] %></td>
+    </tr>
+  <tbody>
+
+</table>

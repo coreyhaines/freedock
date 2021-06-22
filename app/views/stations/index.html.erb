@@ -1,0 +1,6 @@
+<h1>Stations (<%= @stations.length %>)</h1>
+<ul>
+  <% @stations.sort_by{|station| station["name"]}.each do |station| %>
+    <li><%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"])  %></li>
+<% end %>
+</ul>
