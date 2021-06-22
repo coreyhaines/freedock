@@ -13,5 +13,16 @@ RSpec.describe DivvyApi do
     p stations.first
   end
 
+  it "zips correctly" do
+    infos = DivvyApi.all_station_information
+    statuses = DivvyApi.all_station_status
+    combined = infos.zip(statuses)
+    p combined.first
+
+    merged = combined.map{|info, status| info.merge(status)}
+    p merged.first
+
+  end
+
 
 end

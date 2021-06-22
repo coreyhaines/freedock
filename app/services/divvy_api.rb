@@ -2,6 +2,9 @@ require 'net/http'
 require 'json'
 
 class DivvyApi
+  PRESETS = {
+    "corey" => ["447", "517", "597"]
+  }
   def self.all_station_information
     url = "https://gbfs.divvybikes.com/gbfs/en/station_information.json"
     uri = URI(url)

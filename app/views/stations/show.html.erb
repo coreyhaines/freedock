@@ -8,11 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><%= @station_information["name"] %> (<%= @station_information["station_id"] %>)</td>
-      <td><%= @station_status["num_bikes_available"] %></td>
-      <td><%= @station_status["num_docks_available"] %></td>
-    </tr>
+    <% @station_details.each do |station| %>
+      <tr>
+        <td><%= station["name"] %> (<%= station["station_id"] %>)</td>
+        <td><%= station["num_bikes_available"] %></td>
+        <td><%= station["num_docks_available"] %></td>
+      </tr>
+    <% end %>
   <tbody>
 
 </table>
