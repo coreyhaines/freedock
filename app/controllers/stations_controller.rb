@@ -4,8 +4,8 @@ class StationsController < ApplicationController
   end
 
   def show
-    ids = if DivvyApi::PRESETS.key?(params[:id]) then
-            DivvyApi::PRESETS[params[:id]]
+    ids = if StationPresets::IDS.key?(params[:id]) then
+            StationPresets::IDS[params[:id]]
           else
             [params[:id]]
           end
