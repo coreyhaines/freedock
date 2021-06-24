@@ -1,4 +1,4 @@
-<h1>Station Information</h1>
+<%= turbo_frame_tag "stations-view", target: "_top" do %>
 <table style='text-align: center'>
   <thead>
     <tr>
@@ -16,5 +16,6 @@
       </tr>
     <% end %>
   <tbody>
-
 </table>
+<% end %>
+<%= link_to "Back", stations_path %>
