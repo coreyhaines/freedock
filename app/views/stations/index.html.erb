@@ -1,14 +1,19 @@
 <h1>Divvy Station Check</h1>
 <%= turbo_frame_tag "stations-view", target: "_top" %>
-<h2>Presets</h2>
-<ul>
-  <% StationPresets::IDS.keys.each do |preset| %>
-    <li><%= link_to preset, station_path(preset), data: { turbo_frame: "stations-view" } %></li>
-  <% end %>
-</ul>
-<h2>Stations (<%= @stations.length %>)</h2>
-<ul>
-  <% @stations.sort_by{|station| station["name"]}.each do |station| %>
-    <li><%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view" }  %></li>
-<% end %>
-</ul>
+<div data-controller="presets">
+  <h2>Presets</h2>
+  <p>(To save a preset, open the link in a new tab and bookmark it)</p>
+  <ul>
+    <% StationPresets::IDS.keys.each do |preset| %>
+      <li><%= link_to preset, station_path(preset), data: { turbo_frame: "stations-view" } %></li>
+    <% end %>
+    <li><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></li>
+  </ul>
+  <h2>Stations (<%= @stations.length %>)</h2>
+  <ul>
+    <% @stations.sort_by{|station| station["name"]}.each do |station| %>
+      <li><%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view" }  %>
+      <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom preset list)</span></li>
+    <% end %>
+  </ul>
+</div>
