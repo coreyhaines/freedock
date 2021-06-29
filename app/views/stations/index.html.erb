@@ -1,14 +1,9 @@
 <h1>Divvy Station Check</h1>
 <%= turbo_frame_tag "stations-view", target: "_top" %>
 <div data-controller="presets">
-  <h2>Presets</h2>
-  <p>(To save a preset, open the link in a new tab and bookmark it)</p>
-  <ul>
-    <% StationPresets::IDS.keys.each do |preset| %>
-      <li><%= link_to preset, station_path(preset), data: { turbo_frame: "stations-view" } %></li>
-    <% end %>
-    <li><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></li>
-  </ul>
+  <h2>Station List</h2>
+  <p>To create a list of stations to show, select from below. To save a preset list, open the link in a new tab and bookmark it.</p>
+  <div><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></div>
   <h2>Stations (<%= @stations.length %>)</h2>
   <div data-controller="filtering">
     <div>Filter: <input type='text' data-action="filtering#filter" data-filtering-target="query" /></div>

@@ -4,9 +4,7 @@ class StationsController < ApplicationController
   end
 
   def show
-    ids = if StationPresets::IDS.key?(params[:id]) then
-            StationPresets::IDS[params[:id]]
-          elsif params[:id] == "_list" then
+    ids = if params[:id] == "_list" then
             params[:ids].split(",")
           else
             [params[:id]]
