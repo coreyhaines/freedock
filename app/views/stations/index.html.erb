@@ -10,10 +10,15 @@
     <li><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></li>
   </ul>
   <h2>Stations (<%= @stations.length %>)</h2>
-  <ul>
-    <% @stations.sort_by{|station| station["name"]}.each do |station| %>
-      <li><%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view" }  %>
-      <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom preset list)</span></li>
-    <% end %>
-  </ul>
+  <div data-controller="filtering">
+    <div>Filter: <input type='text' data-action="filtering#filter" data-filtering-target="query" /></div>
+    <ul>
+      <% @stations.sort_by{|station| station["name"]}.each do |station| %>
+        <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
+          <%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
+        <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom preset list)</span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
