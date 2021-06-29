@@ -6,7 +6,7 @@
   <div><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></div>
   <h2>Stations (<%= @stations.length %>)</h2>
   <div data-controller="filtering">
-    <div>Filter: <input type='text' data-action="filtering#filter" data-filtering-target="query" /></div>
+    <div><input type='text' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
     <ul>
       <% @stations.sort_by{|station| station["name"]}.each do |station| %>
         <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
