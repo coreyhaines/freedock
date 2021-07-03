@@ -10,16 +10,14 @@
     </div>
     <div class='column'>
       <div>
-        <h2>Station List</h2>
-        <p>To create a list of stations to show, select from below.</p>
-        <h2>Stations (<%= @stations.length %>)</h2>
+        <p>Click on station name to view, or create a list of stations to see.</p>
         <div data-controller="filtering">
           <div><input type='text' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
           <ul>
             <% @stations.sort_by{|station| station["name"]}.each do |station| %>
               <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
                 <%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
-              <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom list)</span>
+              <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to list)</span>
               </li>
             <% end %>
           </ul>

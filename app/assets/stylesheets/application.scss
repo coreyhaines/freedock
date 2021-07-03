@@ -3,3 +3,12 @@
 #presets-display-container {
   display: none;
 }
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  color: #fff;
+  background-color: #3298dc;
+  z-index: 9999;
+}
