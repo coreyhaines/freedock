@@ -1,19 +1,30 @@
-<h1>Divvy Station Check</h1>
-<%= turbo_frame_tag "stations-view" %>
-<div data-controller="presets">
-  <h2>Station List</h2>
-  <p>To create a list of stations to show, select from below. To save a preset list, open the link in a new tab and bookmark it.</p>
-  <div><%= link_to "", "", title: "To save this, you can open in a new window and bookmark it", data: { turbo_frame: "stations-view", presets_target: "customPreset" } %></div>
-  <h2>Stations (<%= @stations.length %>)</h2>
-  <div data-controller="filtering">
-    <div><input type='text' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
-    <ul>
-      <% @stations.sort_by{|station| station["name"]}.each do |station| %>
-        <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
-          <%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
-        <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom preset list)</span>
-        </li>
-      <% end %>
-    </ul>
+<section class='section is-small' data-controller="presets">
+  <div class='columns'>
+    <div class='column'>
+      <div id='presets-display-container' data-presets-target='displayContainer'>
+        Custom list:
+        <%= link_to "bookmarkable", "", data: { presets_target: "bookmarkableLink" }, target: "_blank" %>
+        <%= link_to "", "", data: { turbo_frame: "stations-view", presets_target: "link" }, style: "display: none"%>
+      </div>
+      <%= turbo_frame_tag "stations-view" %>
+    </div>
+    <div class='column'>
+      <div>
+        <h2>Station List</h2>
+        <p>To create a list of stations to show, select from below.</p>
+        <h2>Stations (<%= @stations.length %>)</h2>
+        <div data-controller="filtering">
+          <div><input type='text' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
+          <ul>
+            <% @stations.sort_by{|station| station["name"]}.each do |station| %>
+              <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
+                <%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
+              <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">(add to custom list)</span>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>

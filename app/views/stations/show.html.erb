@@ -1,10 +1,10 @@
 <%= turbo_frame_tag "stations-view" do %>
-<table style='text-align: center'>
+<table class='table'>
   <thead>
     <tr>
       <th>Station</th>
-      <th>Bikes Available</th>
-      <th>Docks Available</th>
+      <th>Bikes</th>
+      <th>Docks</th>
     </tr>
   </thead>
   <tbody>
@@ -18,4 +18,3 @@
   <tbody>
 </table>
 <% end %>
-<%= link_to "Back", stations_path %>

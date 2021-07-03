@@ -2,7 +2,7 @@ import { Controller } from "stimulus"
 
 
 export default class extends Controller {
-  static targets = [ "customPreset" ];
+  static targets = [ "displayContainer", "link", "bookmarkableLink" ];
   static values = { presetStationIdList : Array };
 
   add_to_preset(event) {
@@ -14,11 +14,15 @@ export default class extends Controller {
 
   presetStationIdListValueChanged() {
     if(this.presetStationIdListValue.length === 0) {
+      this.displayContainerTarget.style.display = "none";
       return;
     }
-    const preset = this.customPresetTarget
+    const preset = this.linkTarget
+      ,bookmarkable = this.bookmarkableLinkTarget
       ,presetsAsString = this.presetStationIdListValue.join(",");
     preset.href = "/stations/_list?ids=" + presetsAsString;
-    preset.innerText = "custom preset (" + presetsAsString + ")";
+    bookmarkable.href = "/stations/_list?ids=" + presetsAsString;
+    this.displayContainerTarget.style.display = "block";
+    preset.click();
   }
 }
