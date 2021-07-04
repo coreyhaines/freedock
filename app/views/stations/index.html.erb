@@ -1,7 +1,7 @@
 <section class='section is-small pt-1 pb-0'>
   <div data-controller="expandable" class='message is-small is-info'>
     <div data-action="click->expandable#toggle" class='message-header'>Click for how to use</div>
-    <div data-expandable-target="expandableItem" class='message-body is-hidden'>You can find immediate information on a station by clicking on the station name. Or, if you want to see information for a list, click the &plus; next to the station name. This will add it to the list. Then, if you want to save it for later, click the "bookmarkable version", which opens another tab with just the station list information. You can then bookmark or add to your phone's homescreen for easy access to your favorite stations.</div>
+    <div data-expandable-target="expandableItem" class='message-body is-hidden'>You can find immediate information on a station's bikes and docks availability by clicking on the station name. Or, if you want to see information for a list, click "add to list" next to the station name. This will add it to the list. Then, if you want to save it for later, click the "bookmarkable version", which opens another tab with just the station list information. You can then bookmark or add to your phone's homescreen for easy access to your favorite stations.</div>
   </div>
 </section>
 <section data-controller="presets" class="section is-small pt-1">
@@ -13,20 +13,21 @@
       </div>
       <%= turbo_frame_tag "stations-view" %>
     </div>
-    <div class='column'>
-      <div>
-        <p>Click on station name to view, or create a list of stations to see.</p>
-        <div data-controller="filtering">
-          <div class='control'><input type='text' class='is-info' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
-          <ul>
-            <% @stations.sort_by{|station| station["name"]}.each do |station| %>
-              <li data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
-                <%= link_to "#{station["name"]} (#{station["station_id"]})", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
-                <span data-action="click->presets#add_to_preset" data-station-id="<%=station["station_id"]%>">( &plus; )</span>
-              </li>
-            <% end %>
-          </ul>
-        </div>
+    <div class='column' data-controller='filtering'>
+      <div class='control'><input type='text' class='is-info' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." /></div>
+      <div class='rows'>
+        <% @stations.sort_by{|station| station["name"]}.each_with_index do |station, index| %>
+          <div class="row pt-2 pb-2 <%= index.even? ? 'has-background-light' : '' %>" data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
+            <div class='columns is-mobile'>
+              <div class='column is-narrow'>
+                <button class="button is-small" data-action="presets#add_to_preset" data-station-id="<%=station["station_id"]%>">add to list</button>
+              </div>
+              <div class='column'>
+                <%= link_to "#{station["name"]}", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
