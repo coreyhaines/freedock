@@ -47,7 +47,9 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  # Currently, we are caching the results of the api call for a minute
+  # which is quite small and can fit in memory easily.
+  config.cache_store = :memory_store, { size: 1.megabyte }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
