@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   #
   root "stations#index"
   resources :stations, only: [:index, :show]
+
+  mount Blazer::Engine, at: "blazerful"
 end
