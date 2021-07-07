@@ -41,3 +41,11 @@ workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+require 'barnes'
+
+before_fork do
+  # worker specific setup
+
+  Barnes.start # Must have enabled worker mode for this to block to be called
+end
