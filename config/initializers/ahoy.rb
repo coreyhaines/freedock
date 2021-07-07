@@ -9,6 +9,6 @@ Ahoy.api = false
 # see https://github.com/ankane/ahoy#geocoding
 Ahoy.geocode = false
 
-Ahoy.visit_duration = 5.minutes
+Ahoy.visit_duration = 1.hour
 Ahoy.cookies = false
 Ahoy.mask_ips = true
