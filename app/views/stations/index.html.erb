@@ -6,12 +6,11 @@
 </section>
 <section data-controller="presets" class="section is-small pt-1">
   <div class='columns'>
-    <div class='column'>
-      <div id='presets-display-container' data-presets-target='displayContainer'>
+    <div class='column'  data-presets-target='displayContainer'>
         <%= link_to "click here for bookmarkable version", "", data: { presets_target: "bookmarkableLink" }, target: "_blank" %>
         <%= link_to "", "", data: { turbo_frame: "stations-view", presets_target: "link" }, style: "display: none"%>
-      </div>
-      <%= turbo_frame_tag "stations-view" %>
+        <%= turbo_frame_tag "stations-view" %>
+        <button class="btn is-small" data-action="presets#clearList" value="clear list">clear list</button>
     </div>
     <div class='column' data-controller='filtering'>
       <div class='control'>
@@ -22,10 +21,10 @@
           <div class="row pt-2 pb-2 <%= index.even? ? 'has-background-light' : '' %>" data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
             <div class='columns is-mobile'>
               <div class='column is-narrow'>
-                <button class="button is-small" data-action="presets#add_to_preset" data-station-id="<%=station["station_id"]%>">add to list</button>
+                <button class="button is-small" data-action="presets#addToPreset" data-station-id="<%=station["station_id"]%>">add to list</button>
               </div>
-              <div class='column'>
-                <%= link_to "#{station["name"]}", station_path(station["station_id"]), data: { turbo_frame: "stations-view"}  %>
+              <div class='column' data-action="click->presets#addToPreset" data-station-id="<%=station["station_id"]%>">
+                <%= station["name"] %>
               </div>
             </div>
           </div>

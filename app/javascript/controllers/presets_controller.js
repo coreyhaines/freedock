@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = [ "displayContainer", "link", "bookmarkableLink" ];
   static values = { presetStationIdList : Array };
 
-  add_to_preset(event) {
+  addToPreset(event) {
     const stationId = event.target.dataset.stationId
       ,presetList = this.presetStationIdListValue;
     presetList.push(stationId);
@@ -24,5 +24,9 @@ export default class extends Controller {
     bookmarkable.href = "/stations/_list?ids=" + presetsAsString;
     this.displayContainerTarget.style.display = "block";
     preset.click();
+  }
+
+  clearList() {
+    this.presetStationIdListValue = [];
   }
 }
