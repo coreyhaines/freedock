@@ -4,7 +4,7 @@
     <div data-expandable-target="expandableItem" class='message-body is-hidden'>You can find immediate information on a station's bikes and docks availability by clicking on the station name. Or, if you want to see information for a list, click "add to list" next to the station name. This will add it to the list. Then, if you want to save it for later, click the "bookmarkable version", which opens another tab with just the station list information. You can then bookmark or add to your phone's homescreen for easy access to your favorite stations.</div>
   </div>
 </section>
-<section data-controller="presets" class="section is-small pt-1">
+<section data-controller="presets" data-presets-bikeshare-program-id-value="<%= @bikeshare_program.id %>" class="section is-small pt-1">
   <div class='columns'>
     <div class='column'  data-presets-target='displayContainer'>
         <%= link_to "click here for bookmarkable version", "", data: { presets_target: "bookmarkableLink" }, target: "_blank" %>
