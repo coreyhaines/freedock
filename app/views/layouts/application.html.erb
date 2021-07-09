@@ -19,12 +19,21 @@
       <div class="hero-body has-text-centered">
         <div class="title">Free Dock</div>
         <div class="subtitle">Never arrive at a full station again!</div>
-        <div class="subtitle"><%= @bikeshare_program.name %></div>
+        <% if @bikeshare_program then %>
+          <div class="subtitle"><%= @bikeshare_program.name %>
+          <%= link_to "change", programs_path, class: "is-size-7" %>
+          </div>
+        <% end %>
       </div>
     </section>
     <%= yield %>
     <section class='sticky-footer pl-2'>
-      &copy;2021 with love by <a href='https://twitter.com/coreyhaines'>Corey Haines</a><br>Not affiliated with <a href="https://www.divvybikes.com/">Divvy Bikes</a>
+      &copy;2021 with love by <a href='https://twitter.com/coreyhaines'>Corey Haines</a>
+      <% if @bikeshare_program then %>
+        <br>Not affiliated with <%= link_to @bikeshare_program.name, @bikeshare_program.url, target: "_blank" %>
+    <% else %>
+      <br><%= mail_to "coreyhaines@gmail.com", "Don't find your bikeshare program?", subject: "[FreeDock] Requesting My Bikeshare Program" %>
+    <% end %>
     </section>
   </body>
 </html>

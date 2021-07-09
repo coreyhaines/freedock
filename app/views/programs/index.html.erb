@@ -1,0 +1,23 @@
+<section class='section is-small pt-2 pb-0' data-controller='program-filtering'>
+<div class='control mb-2'>
+  <input type='text' class='input is-info' data-action='program-filtering#filter' data-program-filtering-target='query' placeholder='Search for your program...' />
+</div>
+<% @programs.each do |program| %>
+  <div class='card mb-3' data-program-filtering-target='program' data-program-name='<%= program.name.downcase %>' data-program-location='<%= program.location.downcase %>'>
+      <div class='card-content pb-1 pt-1 pl-3'>
+        <div class='content'>
+          <div><%= program.name %></div>
+          <div><%= program.location %></div>
+        </div>
+      </div>
+      <div class='card-footer'>
+        <p class='card-footer-item'>
+          <%= link_to "Pick this program", stations_path(program_id: program.id) %>
+        </p>
+        <p class='card-footer-item'>
+        <%= link_to "Visit website", program.url, target: "_blank", data: { turbo: false } %>
+        </p>
+      </div>
+    </div>
+<% end %>
+</section>

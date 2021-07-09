@@ -50,7 +50,7 @@ Rails.application.configure do
   # Use a different cache store in production.
   # Currently, we are caching the results of the api call for a minute
   # which is quite small and can fit in memory easily.
-  config.cache_store = :memory_store, { size: 1.megabyte }
+  config.cache_store = :memory_store, { size: 3.megabyte }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

@@ -27,7 +27,7 @@ Rails.application.configure do
   else
     config.action_controller.perform_caching = false
 
-    config.cache_store = :memory_store, { size: 1.megabyte }
+    config.cache_store = :memory_store, { size: 2.megabyte }
   end
 
   # Print deprecation notices to the Rails logger.
