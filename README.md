@@ -1,27 +1,7 @@
-# divvycheck
-Checks station status with the divvy api
-=======
-# README
+# Free Dock
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Do you use a bikeshare? Tired of arriving and having the station full? Me, too!
 
-Things you may want to cover:
+[Free dock](https://freedock.app) allows you to create a list of your favorite destination systems and provides up-to-date availability status, especially how many docks are free.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can pick your city's bikeshare program, then make a list of your favorite destination stations. This list can then be bookmarked for easy checking while you ride.
