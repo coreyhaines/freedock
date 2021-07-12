@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jumph4x/canonical-rails.git
+  revision: f7291df60e862c48cb76f205b43425c8f68ed151
+  specs:
+    canonical-rails (0.2.11)
+      rails (>= 4.1, < 6.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -258,6 +265,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   bulma-rails
   byebug
+  canonical-rails!
   hotwire-rails
   http
   json

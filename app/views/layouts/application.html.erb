@@ -3,12 +3,14 @@
   <head>
     <title>Free Dock</title>
     <meta name="author" content="Corey Haines" />
-    <meta name="description" content="Check the real-time status of your favorite bikeshare stations. Never arrive at a full station again!" />
+    <meta name="description" content="Make a list of your favorite destinations, easily check whether there are free docks while you ride. Never arrive at a full station again!" />
     <meta property="og:title" content="Free Dock" />
-    <meta property="og:description" content="Check the real-time status of your favorite bikeshare stations. Never arrive at a full station again!" />
+    <meta property="og:description" content="Make a list of your favorite destinations, easily check whether there are free docks while you ride. Never arrive at a full station again!" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+     <%= canonical_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
