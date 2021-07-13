@@ -1,6 +1,5 @@
 class StationsController < ApplicationController
   def index
-    ahoy.track "View All Station Informations", bikeshare_program.tracking_hash
     @stations = BikeshareProgramApi.all_station_information(program: bikeshare_program, tracker: ahoy)
     @bikeshare_program = bikeshare_program
   end
