@@ -19,7 +19,8 @@
   <body>
     <section class="hero is-small is-info">
       <div class="hero-body has-text-centered">
-        <div class="title">Free Dock</div>
+        <div class="title">Free Dock<sup><%= link_to "&#10067;".html_safe, about_path, class: 'is-size-6', alt: "About Free Dock" %></sup>
+        </div>
         <div class="subtitle mb-0">Never arrive at a full<br />
           <%= bikeshare_name %> station again!
         </div>
@@ -32,7 +33,7 @@
     </section>
     <%= yield %>
     <section class='sticky-footer pl-2'>
-      &copy;2021 with love by <a href='https://twitter.com/coreyhaines'>Corey Haines</a>
+      &copy;2021 &#10084;&#65039; <a href='https://twitter.com/coreyhaines'>Corey Haines</a>
       <% if @bikeshare_program then %>
         <br>Not affiliated with <%= link_to @bikeshare_program.name, @bikeshare_program.url, target: "_blank" %>
     <% else %>
