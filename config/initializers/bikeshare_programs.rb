@@ -297,36 +297,36 @@ BIKESHARE_PROGRAMS = [
     "https://vancouver-gbfs.smoove.pro/gbfs/en/station_information.json",
     "https://vancouver-gbfs.smoove.pro/gbfs/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    30,
-    "Roll Calgary",
-    "CA",
-    "Calgary, CA",
-    "roll_technologies_ca",
-    "https://rollscooters.com",
-    "https://data.rollapi.com/v1/gbfs/calgary/station_information.json",
-    "https://data.rollapi.com/v1/gbfs/calgary/station_status.json"
-  ),
-  BIKESHARE_PROGRAM.new(
-    31,
-    "Roll Kelowna",
-    "CA",
-    "Kelowna, CA",
-    "roll_technologies_ca",
-    "https://rollscooters.com",
-    "https://data.rollapi.com/v1/gbfs/kelowna/station_information.json",
-    "https://data.rollapi.com/v1/gbfs/kelowna/station_status.json"
-  ),
-  BIKESHARE_PROGRAM.new(
-    32,
-    "Roll Ottawa",
-    "CA",
-    "Ottowa, CA",
-    "roll_technologies_ca",
-    "https://rollscooters.com",
-    "https://data.rollapi.com/v1/gbfs/ottawa/station_information.json",
-    "https://data.rollapi.com/v1/gbfs/ottawa/station_status.json"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #30,
+    #"Roll Calgary",
+    #"CA",
+    #"Calgary, CA",
+    #"roll_technologies_ca",
+    #"https://rollscooters.com",
+    #"https://data.rollapi.com/v1/gbfs/calgary/station_information.json",
+    #"https://data.rollapi.com/v1/gbfs/calgary/station_status.json"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #31,
+    #"Roll Kelowna",
+    #"CA",
+    #"Kelowna, CA",
+    #"roll_technologies_ca",
+    #"https://rollscooters.com",
+    #"https://data.rollapi.com/v1/gbfs/kelowna/station_information.json",
+    #"https://data.rollapi.com/v1/gbfs/kelowna/station_status.json"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #32,
+    #"Roll Ottawa",
+    #"CA",
+    #"Ottowa, CA",
+    #"roll_technologies_ca",
+    #"https://rollscooters.com",
+    #"https://data.rollapi.com/v1/gbfs/ottawa/station_information.json",
+    #"https://data.rollapi.com/v1/gbfs/ottawa/station_status.json"
+  #),
   BIKESHARE_PROGRAM.new(
     33,
     "Sobi Hamilton",
