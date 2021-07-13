@@ -12,13 +12,11 @@ class StationsController < ApplicationController
           end
     ahoy.track "View Station Status", { program: bikeshare_program.tracking_hash, ids: ids }
 
-    stations_information = BikeshareProgramApi.all_station_information(program: bikeshare_program, tracker: ahoy)
-    informations = stations_information.select {|st| ids.include? st["station_id"]}
-
-    stations_status = BikeshareProgramApi.all_station_status(program: bikeshare_program, tracker: ahoy)
-    statuses = stations_status.select {|st| ids.include? st["station_id"]}
-
-    @station_details = informations.zip(statuses).map{|info, status| info.merge(status)}
+    @station_details = BikeshareProgramApi.specific_station_statuses(
+      program: bikeshare_program,
+      tracker: ahoy,
+      ids: ids
+    )
     @bikeshare_program = bikeshare_program
   end
 

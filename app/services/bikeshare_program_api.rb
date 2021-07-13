@@ -17,6 +17,18 @@ class BikeshareProgramApi
     end
   end
 
+  def self.specific_station_statuses(program:, tracker:, ids:)
+    informations = BikeshareProgramApi.
+      all_station_information(program: program, tracker: tracker).
+      select {|st| ids.include? st["station_id"]}
+
+    statuses = BikeshareProgramApi.
+      all_station_status(program: program, tracker: tracker).
+      select {|st| ids.include? st["station_id"]}
+
+    informations.zip(statuses).map{|info, status| info.merge(status)}
+  end
+
   def self.get_from_api(url)
     HTTP.headers("Client-Identifier" => "coreyhaines/freedock.app").get(url).parse.dig("data", "stations")
   end
