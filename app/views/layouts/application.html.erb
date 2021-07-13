@@ -3,14 +3,14 @@
   <head>
     <title>Free Dock</title>
     <meta name="author" content="Corey Haines" />
-    <meta name="description" content="Make a list of your favorite destinations, easily check whether there are free docks while you ride. Never arrive at a full station again!" />
-    <meta property="og:title" content="Free Dock" />
-    <meta property="og:description" content="Make a list of your favorite destinations, easily check whether there are free docks while you ride. Never arrive at a full station again!" />
+    <meta name="description" content="Make a list of your favorite <%= bikeshare_name %> destinations, easily check whether there are free docks while you ride. Never arrive at a full <%= bikeshare_name %> station again!" />
+    <meta property="og:title" content="Free Dock <%= bikeshare_name  %>" />
+    <meta property="og:description" content="Make a list of your favorite <%= bikeshare_name %> destinations, easily check whether there are free docks while you ride. Never arrive at a full <%= bikeshare_name %> station again!" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-     <%= canonical_tag %>
+    <%= canonical_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
@@ -20,10 +20,12 @@
     <section class="hero is-small is-info">
       <div class="hero-body has-text-centered">
         <div class="title">Free Dock</div>
-        <div class="subtitle">Never arrive at a full station again!</div>
+        <div class="subtitle mb-0">Never arrive at a full<br />
+          <%= bikeshare_name %> station again!
+        </div>
         <% if @bikeshare_program then %>
-          <div class="subtitle"><%= @bikeshare_program.name %>
-          <%= link_to "change", programs_path, class: "is-size-7" %>
+          <div class="is-size-7 has-text-right">
+            <%= link_to "change bikeshare program", programs_path, style: "text-decoration: underline" %>
           </div>
         <% end %>
       </div>
@@ -35,7 +37,7 @@
         <br>Not affiliated with <%= link_to @bikeshare_program.name, @bikeshare_program.url, target: "_blank" %>
     <% else %>
       <br><%= mail_to "coreyhaines@gmail.com", "Don't find your bikeshare program?", subject: "[FreeDock] Requesting My Bikeshare Program" %>
-    <% end %>
+  <% end %>
     </section>
   </body>
 </html>
