@@ -257,36 +257,36 @@ BIKESHARE_PROGRAMS = [
     "https://gbfs.velobixi.com/gbfs/en/station_information.json",
     "https://gbfs.velobixi.com/gbfs/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    26,
-    "Lime Calgary",
-    "CA",
-    "Calgary, CA",
-    "lime_calgary",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/calgary/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/calgary/station_status"
-  ),
-  BIKESHARE_PROGRAM.new(
-    27,
-    "Lime Edmonton",
-    "CA",
-    "Edmontan, CA",
-    "lime_edmonton",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/edmonton/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/edmonton/station_status"
-  ),
-  BIKESHARE_PROGRAM.new(
-    28,
-    "Lime Ottawa",
-    "CA",
-    "Ottowa, CA",
-    "lime_ottawa",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/ottawa/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/ottawa/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #26,
+    #"Lime Calgary",
+    #"CA",
+    #"Calgary, CA",
+    #"lime_calgary",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/calgary/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/calgary/station_status"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #27,
+    #"Lime Edmonton",
+    #"CA",
+    #"Edmontan, CA",
+    #"lime_edmonton",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/edmonton/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/edmonton/station_status"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #28,
+    #"Lime Ottawa",
+    #"CA",
+    #"Ottowa, CA",
+    #"lime_ottawa",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/ottawa/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/ottawa/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     29,
     "Mobi Bike Share",
@@ -397,16 +397,16 @@ BIKESHARE_PROGRAMS = [
     "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ch/en/station_information.json",
     "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ch/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    40,
-    "sharedmobility.ch",
-    "CH",
-    "Switzerland, CH",
-    "sharedmobility.ch",
-    "https://www.sharedmobility.ch/info",
-    "https://www.sharedmobility.ch/station_information.json",
-    "https://www.sharedmobility.ch/station_status.json"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #40,
+    #"sharedmobility.ch",
+    #"CH",
+    #"Switzerland, CH",
+    #"sharedmobility.ch",
+    #"https://www.sharedmobility.ch/info",
+    #"https://www.sharedmobility.ch/station_information.json",
+    #"https://www.sharedmobility.ch/station_status.json"
+  #),
   BIKESHARE_PROGRAM.new(
     41,
     "Bike Itaú - Santiago",
@@ -687,16 +687,16 @@ BIKESHARE_PROGRAMS = [
     "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fg/en/station_information.json",
     "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fg/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    69,
-    "Lime Hamburg",
-    "DE",
-    "Hamburg, DE",
-    "lime_hamburg",
-    "https://li.me",
-    "https://data.lime.bike/api/partners/v1/gbfs/hamburg/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/hamburg/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #69,
+    #"Lime Hamburg",
+    #"DE",
+    #"Hamburg, DE",
+    #"lime_hamburg",
+    #"https://li.me",
+    #"https://data.lime.bike/api/partners/v1/gbfs/hamburg/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/hamburg/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     70,
     "metropolradruhr Bochum",
@@ -1327,16 +1327,16 @@ BIKESHARE_PROGRAMS = [
     "https://valencefr.publicbikesystem.net/customer/ube/gbfs/v1/en/station_information",
     "https://valencefr.publicbikesystem.net/customer/ube/gbfs/v1/en/station_status"
   ),
-  BIKESHARE_PROGRAM.new(
-    133,
-    "Lime Paris",
-    "FR",
-    "Paris, FR",
-    "lime_paris",
-    "https://li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/paris/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/paris/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #133,
+    #"Lime Paris",
+    #"FR",
+    #"Paris, FR",
+    #"lime_paris",
+    #"https://li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/paris/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/paris/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     134,
     "Optymo Belfort",
@@ -1857,16 +1857,16 @@ BIKESHARE_PROGRAMS = [
     "https://stables.donkey.bike/api/public/gbfs/donkey_budapest/en/station_information.json",
     "https://stables.donkey.bike/api/public/gbfs/donkey_budapest/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    186,
-    "Lime Tel Aviv",
-    "IL",
-    "Tel Aviv, IL",
-    "lime_tel_aviv",
-    "https://li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/tel_aviv/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/tel_aviv/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #186,
+    #"Lime Tel Aviv",
+    #"IL",
+    #"Tel Aviv, IL",
+    #"lime_tel_aviv",
+    #"https://li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/tel_aviv/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/tel_aviv/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     187,
     "Chartered Bike (Bhopal - India)",
@@ -1897,16 +1897,16 @@ BIKESHARE_PROGRAMS = [
     "https://stables.donkey.bike/api/public/gbfs/donkey_reykjavik/en/station_information.json",
     "https://stables.donkey.bike/api/public/gbfs/donkey_reykjavik/en/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    190,
-    "Lime Rome",
-    "IT",
-    "Rome, IT",
-    "lime_rome",
-    "https://li.me",
-    "https://data.lime.bike/api/partners/v1/gbfs/rome/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/rome/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #190,
+    #"Lime Rome",
+    #"IT",
+    #"Rome, IT",
+    #"lime_rome",
+    #"https://li.me",
+    #"https://data.lime.bike/api/partners/v1/gbfs/rome/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/rome/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     191,
     "bike4all",
@@ -2567,16 +2567,16 @@ BIKESHARE_PROGRAMS = [
     "https://gbfs.bcycle.com/bcycle_desmoines/station_information.json",
     "https://gbfs.bcycle.com/bcycle_desmoines/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    257,
-    "Divvy",
-    "US",
-    "Chicago, IL",
-    "divvy",
-    "http://www.divvybikes.com/",
-    "https://gbfs.divvybikes.com/gbfs/en/station_information.json",
-    "https://gbfs.divvybikes.com/gbfs/en/station_status.json"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #257,
+    #"Divvy",
+    #"US",
+    #"Chicago, IL",
+    #"divvy",
+    #"http://www.divvybikes.com/",
+    #"https://gbfs.divvybikes.com/gbfs/en/station_information.json",
+    #"https://gbfs.divvybikes.com/gbfs/en/station_status.json"
+  #),
   BIKESHARE_PROGRAM.new(
     258,
     "El Paso B-cycle",
@@ -2787,36 +2787,36 @@ BIKESHARE_PROGRAMS = [
     "https://gbfs.bcycle.com/bcycle_jacksoncounty/station_information.json",
     "https://gbfs.bcycle.com/bcycle_jacksoncounty/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    279,
-    "Lime Arlington",
-    "US",
-    "Arlington, VA",
-    "lime_arlington",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/arlington/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/arlington/station_status"
-  ),
-  BIKESHARE_PROGRAM.new(
-    280,
-    "Lime Baltimore",
-    "US",
-    "Baltimore, MD",
-    "lime_baltimore",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/baltimore/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/baltimore/station_status"
-  ),
-  BIKESHARE_PROGRAM.new(
-    281,
-    "Lime Chicago",
-    "US",
-    "Chicago, IL",
-    "lime_chicago",
-    "https://www.li.me/",
-    "https://data.lime.bike/api/partners/v1/gbfs/chicago/station_information",
-    "https://data.lime.bike/api/partners/v1/gbfs/chicago/station_status"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #279,
+    #"Lime Arlington",
+    #"US",
+    #"Arlington, VA",
+    #"lime_arlington",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/arlington/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/arlington/station_status"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #280,
+    #"Lime Baltimore",
+    #"US",
+    #"Baltimore, MD",
+    #"lime_baltimore",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/baltimore/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/baltimore/station_status"
+  #),
+  #BIKESHARE_PROGRAM.new(
+    #281,
+    #"Lime Chicago",
+    #"US",
+    #"Chicago, IL",
+    #"lime_chicago",
+    #"https://www.li.me/",
+    #"https://data.lime.bike/api/partners/v1/gbfs/chicago/station_information",
+    #"https://data.lime.bike/api/partners/v1/gbfs/chicago/station_status"
+  #),
   BIKESHARE_PROGRAM.new(
     282,
     "Louvelo",
@@ -2947,16 +2947,16 @@ BIKESHARE_PROGRAMS = [
     "http://reddybikeshare.socialbicycles.com/opendata/station_information.json",
     "http://reddybikeshare.socialbicycles.com/opendata/station_status.json"
   ),
-  BIKESHARE_PROGRAM.new(
-    295,
-    "Relay Bike Share",
-    "US",
-    "Atlanta, GA",
-    "relay_bike_share",
-    "http://relaybikeshare.com/",
-    "http://relaybikeshare.socialbicycles.com/opendata/station_information.json",
-    "http://relaybikeshare.socialbicycles.com/opendata/station_status.json"
-  ),
+  #BIKESHARE_PROGRAM.new(
+    #295,
+    #"Relay Bike Share",
+    #"US",
+    #"Atlanta, GA",
+    #"relay_bike_share",
+    #"http://relaybikeshare.com/",
+    #"http://relaybikeshare.socialbicycles.com/opendata/station_information.json",
+    #"http://relaybikeshare.socialbicycles.com/opendata/station_status.json"
+  #),
   BIKESHARE_PROGRAM.new(
     296,
     "RTC Bike Share",
