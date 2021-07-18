@@ -12,7 +12,7 @@
         <%= turbo_frame_tag "stations-view" %>
         <button class="btn is-small" data-action="presets#clearList" value="clear list">clear list</button>
     </div>
-    <div class='column' data-controller='filtering'>
+    <div class='column' data-controller='filtering' data-presets-target="filter">
       <div class='control'>
         <input type='text' class='input is-info' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." />
       </div>
