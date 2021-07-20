@@ -33,7 +33,7 @@ gem 'blazer'
 
 gem 'barnes'
 
-gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+gem 'canonical-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
