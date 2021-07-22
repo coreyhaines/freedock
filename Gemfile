@@ -29,7 +29,6 @@ gem 'hotwire-rails'
 gem 'http'
 
 gem 'ahoy_matey'
-gem 'blazer'
 
 gem 'barnes'
 
