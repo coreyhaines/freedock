@@ -26,13 +26,6 @@ export default class extends Controller {
     preset.href = "/stations/_list?program_id=" + this.bikeshareProgramIdValue + "&ids=" + presetsAsString;
     bookmarkable.href = "/stations/_list?program_id=" + this.bikeshareProgramIdValue + "&ids=" + presetsAsString;
     this.displayContainerTarget.style.display = "block";
-    this.stationTargets.forEach((element) => {
-      if(this.presetStationIdListValue.includes(element.dataset.stationId)){
-        element.style.display = "none";
-      }else{
-        element.style.display = "";
-      }
-    });
     preset.click();
   }
 
