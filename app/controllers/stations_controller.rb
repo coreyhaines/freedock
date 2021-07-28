@@ -1,6 +1,6 @@
 class StationsController < ApplicationController
   def index
-    @stations = BikeshareProgramApi.all_station_information(program: bikeshare_program, tracker: ahoy)
+    @stations = BikeshareProgramApi.all_station_information(program: bikeshare_program, tracker: ahoy).sort_by{|station| station["name"]}
     @bikeshare_program = bikeshare_program
   end
 
@@ -16,7 +16,7 @@ class StationsController < ApplicationController
       program: bikeshare_program,
       tracker: ahoy,
       ids: ids
-    )
+    ).sort_by { |station| station["name"] }
     @bikeshare_program = bikeshare_program
   end
 

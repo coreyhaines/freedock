@@ -2,7 +2,7 @@ import { Controller } from "stimulus"
 
 
 export default class extends Controller {
-  static targets = [ "displayContainer", "link", "bookmarkableLink" ];
+  static targets = [ "displayContainer", "filter", "link", "bookmarkableLink", "station" ];
   static values = { bikeshareProgramId : Number, presetStationIdList : Array };
 
   addToPreset(event) {
@@ -13,6 +13,9 @@ export default class extends Controller {
   }
 
   presetStationIdListValueChanged() {
+    if (this.presetStationIdListValue) {
+      this.filterTarget.dataset.filteringPresetStationIdListValue = JSON.stringify(this.presetStationIdListValue);
+    }
     if(this.presetStationIdListValue.length === 0) {
       this.displayContainerTarget.style.display = "none";
       return;

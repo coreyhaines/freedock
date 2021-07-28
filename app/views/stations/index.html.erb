@@ -12,13 +12,13 @@
         <%= turbo_frame_tag "stations-view" %>
         <button class="btn is-small" data-action="presets#clearList" value="clear list">clear list</button>
     </div>
-    <div class='column' data-controller='filtering'>
+    <div class='column' data-controller='filtering' data-presets-target="filter">
       <div class='control'>
         <input type='text' class='input is-info' data-action="filtering#filter" data-filtering-target="query" placeholder="Filter stations..." />
       </div>
       <div class='rows'>
-        <% @stations.sort_by{|station| station["name"]}.each_with_index do |station, index| %>
-          <div class="row pt-2 pb-2 <%= index.even? ? 'has-background-light' : '' %>" data-station-name="<%= station["name"].downcase %>" data-filtering-target="station">
+        <% @stations.each_with_index do |station, index| %>
+          <div class="row pt-2 pb-2 <%= index.even? ? 'has-background-light' : '' %>" data-station-name="<%= station["name"].downcase %>" data-station-id="<%= station["station_id"] %>" data-filtering-target="station" data-presets-target="station">
             <div class='columns is-mobile'>
               <div class='column is-narrow'>
                 <button class="button is-small" data-action="presets#addToPreset" data-station-id="<%=station["station_id"]%>">add to list</button>
