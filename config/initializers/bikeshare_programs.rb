@@ -334,8 +334,8 @@ BIKESHARE_PROGRAMS = [
     "Hamilton Ontario, ON",
     "sobi_hamilton",
     "https://hamilton.socialbicycles.com/",
-    "http://hamilton.socialbicycles.com/opendata/station_information.json",
-    "http://hamilton.socialbicycles.com/opendata/station_status.json"
+    "https://hamilton.socialbicycles.com/opendata/station_information.json",
+    "https://hamilton.socialbicycles.com/opendata/station_status.json"
   ),
   BIKESHARE_PROGRAM.new(
     34,
@@ -2254,8 +2254,8 @@ BIKESHARE_PROGRAMS = [
     "Edinburgh, SC",
     "edinburgh-city-bikes",
     "https://edinburghcyclehire.com/",
-    "http://gbfs.urbansharing.com/edinburghcyclehire.com/station_information.json",
-    "http://gbfs.urbansharing.com/edinburghcyclehire.com/station_status.json"
+    "https://gbfs.urbansharing.com/edinburghcyclehire.com/station_information.json",
+    "https://gbfs.urbansharing.com/edinburghcyclehire.com/station_status.json"
   ),
   BIKESHARE_PROGRAM.new(
     226,
@@ -2544,8 +2544,8 @@ BIKESHARE_PROGRAMS = [
     "St. Petersburg, FL",
     "coast_bike_share",
     "http://coastbikeshare.com/",
-    "http://coast.socialbicycles.com/opendata/station_information.json",
-    "http://coast.socialbicycles.com/opendata/station_status.json"
+    "https://coast.socialbicycles.com/opendata/station_information.json",
+    "https://coast.socialbicycles.com/opendata/station_status.json"
   ),
   BIKESHARE_PROGRAM.new(
     255,
@@ -2924,8 +2924,8 @@ BIKESHARE_PROGRAMS = [
     "Eugene, OR",
     "peacehealth_rides",
     "https://www.peacehealthrides.com/",
-    "http://peacehealthrides.com/opendata/station_information.json",
-    "http://peacehealthrides.com/opendata/station_status.json"
+    "https://peacehealthrides.com/opendata/station_information.json",
+    "https://peacehealthrides.com/opendata/station_status.json"
   ),
   BIKESHARE_PROGRAM.new(
     293,
@@ -2944,8 +2944,8 @@ BIKESHARE_PROGRAMS = [
     "Buffalo, NY",
     "reddy_bikeshare",
     "http://reddybikeshare.socialbicycles.com",
-    "http://reddybikeshare.socialbicycles.com/opendata/station_information.json",
-    "http://reddybikeshare.socialbicycles.com/opendata/station_status.json"
+    "https://reddybikeshare.socialbicycles.com/opendata/station_information.json",
+    "https://reddybikeshare.socialbicycles.com/opendata/station_status.json"
   ),
   #BIKESHARE_PROGRAM.new(
     #295,
